@@ -1,0 +1,27 @@
+body { 
+    font-family:'Segoe UI'; 
+    padding-top: 4rem;
+}
+a { 
+    color: inherit !important; 
+    text-decoration: none; 
+}
+a:hover, button:hover { 
+    color: #e1a04b !important; 
+    transition: .2s; 
+}
+
+.silver { background-color: #ccd; }
+.title { font-size: 3rem; }
+.ms-6 { margin-left: 3.5rem; }
+.footer-text { font-size: 14px; }
+
+#btnTop { 
+    display: none; 
+    bottom: 30px; 
+    right: 20px; 
+    transition: .3s;}
+#btnTop:hover { 
+    background-color: green !important; 
+    transition: .3s; 
+}

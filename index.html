@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+          crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top silver px-3">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/images/logo.svg" alt="main-logo">
+        </a>
+        <button 
+            class="navbar-toggler" 
+            id="collapsed"
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarCollapse"
+            onclick="changeToClose()"
+        >
+            <span>
+                <img src="./assets/images/icon-menu.png" width="32px" height="32px" alt="collapse-button">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav w-100 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link text-dark ms-6">Home</a></li>
+                <li class="nav-item"><a href="#new" class="nav-link text-dark ms-6">New</a></li>
+                <li class="nav-item"><a href="#popular" class="nav-link text-dark ms-6">Popular</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark ms-6">Trending</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-dark ms-6">Categories</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="overflow-hidden">
+                    <picture>
+                        <source media="(max-width:576px)" srcset="./assets/images/image-web-3-mobile.jpg">
+                        <img src="./assets/images/image-web-3-desktop.jpg" alt="image-web" width="100%">
+                    </picture>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 px-4 py-3">
+                        <h1 class="title">The Bright Future of Web 3.0?</h1>
+                    </div>
+                    <div class="col-lg-7 px-4 py-3">
+                        <p class="mt-2">We dive into the next evolution of the web that claims to put the 
+                            power of the platforms back into the hands of the people. But is 
+                            it really fulfilling its promise?
+                        </p>
+                        <button type="button" class="bg-dark text-light px-4 py-2 my-3">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bg-dark text-light p-3" id="new">
+                <h2 class="text-warning">NEW</h2>
+                <div class="my-4">
+                    <h4 class="text-light font-weight-bold my-4">
+                        <a href="#">Hydrogen VS Electric Cars</a>
+                    </h4>
+                    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </div><hr>
+                <div class="my-4">
+                    <h4 class="text-light my-4">
+                        <a href="#">The Downsides of AI Artistry</a>
+                    </h4>
+                    <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                </div><hr>
+                <div class="my-4">
+                    <h4 class="text-light my-4">
+                        <a href="#">Is VC Funding Drying Up?</a>
+                    </h4>
+                    <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4" id="popular">
+            <div class="col-lg-4 d-flex py-3">
+                <div>
+                    <img src="./assets/images/image-retro-pcs.jpg" 
+                         width="90px" 
+                         height="120px" 
+                         alt="image-retro-pcs">
+                </div>
+                <div class="ms-3">
+                    <h3>01</h3>
+                    <h5><a href="#">Reviving Retro PCs</a></h5>
+                    <p class="m-0">What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex py-3">
+                <div>
+                    <img src="./assets/images/image-top-laptops.jpg" 
+                         width="90px"
+                         height="120px"
+                         alt="image-top-laptops">
+                </div>
+                <div class="ms-3">
+                    <h3>02</h3>
+                    <h5><a href="#">Top 10 Laptops of 2022</a></h5>
+                    <p class="m-0">Our best picks for various needs and budgets.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex py-3">
+                <div>
+                    <img src="./assets/images/image-gaming-growth.jpg"
+                         width="90px"
+                         height="120px" 
+                         alt="image-gaming-growth">
+                </div>
+                <div class="ms-3">
+                    <h3>03</h3>
+                    <h5><a href="#">The Growth of Gaming</a></h5>
+                    <p class="m-0">How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </div>
+        </div>
+        <button class="position-fixed bg-warning p-2 border-0 rounded" onclick="backToTop()" id="btnTop">
+            <img src="./assets/images/up.png" width="32px" height="32px" alt="up-button">
+        </button>
+    </main>
+    <footer class="footer-text silver text-center p-2 ms-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="text-success" target="_blank">
+        Frontend Mentor</a>. Coded by <a href="#" class="text-primary">Muchammad Fachri Irzami</a>.
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" 
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" 
+            crossorigin="anonymous">
+    </script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
