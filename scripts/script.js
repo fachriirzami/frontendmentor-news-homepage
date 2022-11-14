@@ -3,13 +3,13 @@ let collapse = document.getElementById("collapsed")
 
 function changeToClose() {
   collapse.innerHTML = 
-    '<span><img src="./assets/images/icon-menu-close.png" width="32px" height="32px" alt="close-button"></span>'
+    '<span><img src="./assets/images/icon-menu-close.png" width="32" height="32" alt="close-button"></span>'
   collapse.setAttribute('onclick','changeToMenu()')
 }
 
 function changeToMenu() {
   collapse.innerHTML = 
-    '<span><img src="./assets/images/icon-menu.png" width="32px" height="32px" alt="collapsed-button"></span>'
+    '<span><img src="./assets/images/icon-menu.png" width="32" height="32" alt="collapsed-button"></span>'
   collapse.setAttribute('onclick','changeToClose()')
 }
 
