@@ -13,7 +13,7 @@ a:hover, button:hover {
 }
 @media (hover: hover) and (pointer: fine) {
     a:hover, button:hover { 
-        color: #e1a04b !important; 
+        color: black !important; 
         transition: .2s; 
     }
 }
