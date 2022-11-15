@@ -9,7 +9,7 @@ a {
 }
 @media (hover: hover) and (pointer: fine) {
     a:hover, button:hover { 
-    color: #e1a04b !important; 
+    color: #e1a04b; 
     transition: .2s; 
 }
 
@@ -22,7 +22,8 @@ a {
     display: none; 
     bottom: 30px; 
     right: 20px; 
-    transition: .3s;}
+    transition: .3s;
+}
 #btnTop:hover { 
     background-color: green !important; 
     transition: .3s; 
