@@ -1,29 +1,35 @@
 // Change Menu Button
-let collapse = document.getElementById("collapsed")
+let btnCol = document.getElementById("collapse-button")
+let iconCol = document.getElementById("icon-collapse")
 
 function changeToClose() {
-  collapse.innerHTML = 
-    '<span><img src="./assets/images/icon-menu-close.png" width="32" height="32" alt="close-button"></span>'
-  collapse.setAttribute('onclick','changeToMenu()')
+  iconCol.src = "./assets/images/icon-menu-close.png"
+  iconCol.alt = "close-button"
+  btnCol.setAttribute('onclick','changeToMenu()')
 }
 
 function changeToMenu() {
-  collapse.innerHTML = 
-    '<span><img src="./assets/images/icon-menu.png" width="32" height="32" alt="collapsed-button"></span>'
-  collapse.setAttribute('onclick','changeToClose()')
+  iconCol.src = "./assets/images/icon-menu.png"
+  iconCol.alt = "collapse-button"
+  btnCol.setAttribute('onclick','changeToClose()')
 }
 
 // Back To Top Button
-let btn = document.getElementById("btnTop")
+let btnTop = document.getElementById("btnTop")
 
 window.onscroll = () => { scrollToShow() }
 
 function scrollToShow() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btn.style.display = "block"
+    btnTop.style.animationName = "fadeIn"
+    setTimeout( () => { btnTop.style.display = "block" }, 150)
   } 
-  else { btn.style.display = "none" }
+  else {
+    btnTop.style.animationName = "fadeOut"
+    setTimeout( () => { btnTop.style.display = "none" }, 140)
+  }
 }
+
 function backToTop() {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
