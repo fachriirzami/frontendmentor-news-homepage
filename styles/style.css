@@ -5,11 +5,11 @@ body {
 a { text-decoration: none; }
 
 .scroll-top { scroll-margin-top: 4.8rem; }
+.button-bold { font-weight: bold; }
 .silver { background-color: #ccd; }
 .title { font-size: 3rem; }
 .footer-text { font-size: 14px; }
 
-#switch-mode { font-weight: bold; }
 #btnTop { 
     display: none;
     bottom: 30px; 
